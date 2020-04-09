@@ -4,6 +4,7 @@ import 'styles/index.scss';
 import HelloWorld from 'components/HelloWorld';
 import DisplayArticle from 'components/TestArticle';
 import TodoView from 'components/Todo/TodoView';
+import ProcessPanelView from 'components/ProcessPanel/ProcessPanelView';
 
 const user = {name: 'Tanya'};
 
@@ -28,8 +29,9 @@ function App() {
             />
 
             <TodoView />
-        </React.StrictMode>
 
+            <ProcessPanelView />
+        </React.StrictMode>
     );
 }
 
