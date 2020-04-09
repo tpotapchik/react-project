@@ -18,19 +18,21 @@ function App() {
     return (
         <React.StrictMode>
             <HelloWorld userName={user.name}/>
-            <hr />
 
-            <h2>Post</h2>
-
-            <DisplayArticle
-                title={article.title}
-                text={article.text}
-                author={article.author}
-            />
-
-            <TodoView />
-
-            <ProcessPanelView />
+            <section className="container section">
+                <h2>Post</h2>
+                <DisplayArticle
+                    title={article.title}
+                    text={article.text}
+                    author={article.author}
+                />
+            </section>
+            <section className="container section">
+                <TodoView />
+            </section>
+            <section className="container section">
+                <ProcessPanelView />
+            </section>
         </React.StrictMode>
     );
 }
