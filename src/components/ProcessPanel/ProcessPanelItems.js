@@ -1,22 +1,25 @@
 import React from 'react';
 import ProcessPanelItem from './ProcessPanelItem';
+import lightbulb from 'assets/lightbulb.svg';
+import keyboard from 'assets/keyboard.svg';
+import bolt from 'assets/bolt.svg';
 
 const panelItems = [
     {
-        id:1,
-        icon: 'lightbulb.svg',
+        id: 1,
+        icon: lightbulb,
         title: 'Thoughtful Design',
         text: 'Some article content, some content and other content',
     },
     {
-        id:2,
-        icon: 'keyboard.svg',
+        id: 2,
+        icon: keyboard,
         title: 'Well Crafted',
         text: 'Some article content, some content and other content',
     },
     {
-        id:3,
-        icon: 'bolt.svg',
+        id: 3,
+        icon: bolt,
         title: 'Easy to Customize',
         text: 'Some article content, some content and other content',
     }

@@ -9,7 +9,7 @@ const ProcessPanelView = () => {
         <div className="container">
             <div className="process-panel">
                 <ProcessPanelIntro
-                    title="WHY THIS IS AWESOME"
+                    title="Why this is awesome"
                     intro="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 />
                 <ProcessPanelItems />

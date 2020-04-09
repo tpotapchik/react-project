@@ -4,7 +4,6 @@ import AddTodo from './AddTodo';
 import TodoContext from './TodoContext';
 
 function TodoView() {
-
     const [todos, setTodos] = React.useState([
         {id: 1, completed: false, title: 'Buy milk'},
         {id: 2, completed: true, title: 'Buy water'},
