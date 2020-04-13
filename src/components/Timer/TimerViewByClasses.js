@@ -40,7 +40,7 @@ class Timer extends React.Component {
     }
 
     setSeconds = (seconds) => {
-        this.setState({seconds: seconds});
+        this.setState({seconds});
     };
 
     reset = () => {
@@ -51,9 +51,7 @@ class Timer extends React.Component {
     };
 
     toggleRunning = () => {
-        this.setState((state) => {
-            return {running: !state.running}
-        });
+        this.setState({running: !this.state.running});
     };
 
     componentDidUpdate() {
