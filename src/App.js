@@ -5,6 +5,7 @@ import HelloWorld from 'components/HelloWorld';
 import DisplayArticle from 'components/TestArticle';
 import TodoView from 'components/Todo/TodoView';
 import ProcessPanelView from 'components/ProcessPanel/ProcessPanelView';
+import Timer from 'components/Timer/Timer';
 
 const user = {name: 'Tanya'};
 
@@ -17,6 +18,10 @@ const article = {
 function App() {
     return (
         <React.StrictMode>
+            <section className="container section">
+                <Timer />
+            </section>
+
             <HelloWorld userName={user.name}/>
 
             <section className="container section">
