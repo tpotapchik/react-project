@@ -6,6 +6,9 @@ import DisplayArticle from 'components/TestArticle';
 import TodoView from 'components/Todo/TodoView';
 import ProcessPanelView from 'components/ProcessPanel/ProcessPanelView';
 import Timer from 'components/Timer/Timer';
+import Registration from 'components/Registration/Registration'
+import Converter from 'components/Converter/Converter'
+import ConverterAdvanced from 'components/Converter/ConverterAdvanced'
 
 const user = {name: 'Tanya'};
 
@@ -37,6 +40,15 @@ function App() {
             </section>
             <section className="container section">
                 <ProcessPanelView />
+            </section>
+            <section className="container section">
+                <Registration />
+            </section>
+            <section className="container section">
+                <Converter />
+            </section>
+            <section className="container section">
+                <ConverterAdvanced />
             </section>
         </React.StrictMode>
     );
