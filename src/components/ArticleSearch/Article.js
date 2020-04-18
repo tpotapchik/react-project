@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ArticleItems from './ArticleItems';
 import ArticleSearch from './ArticleSearch';
 
@@ -31,10 +31,10 @@ const Article = () => {
     }
 
     return (
-        <>
+        <div>
             <ArticleSearch onInput={onInputChange} defaultItems={articleItemsPanel}/>
             <ArticleItems items={items}/>
-        </>
+        </div>
     )
 };
 

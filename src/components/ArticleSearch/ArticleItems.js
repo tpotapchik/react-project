@@ -3,7 +3,7 @@ import ArticleItem from './ArticleItem';
 
 import './ArticleItems.scss';
 
-const ArticleItems = ({items}) => {
+const ArticleItems = ({ items }) => {
     return (
         <div className="article-items">
             {
