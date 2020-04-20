@@ -1,16 +1,15 @@
 import React from 'react';
 
-import './TestArticle.scss';
+import './ArticleItem.scss';
 
-const DisplayArticle = (props) => {
-    const { title, author, text } = props;
+const ArticleItem = ({ title, text, author }) => {
     return (
         <div className="article-item">
-            <h2 className="article-title">This is {title}</h2>
+            <h2 className="article-title">{title}</h2>
             <p className="article-text">{text}</p>
             <p className="article-author">{author}</p>
         </div>
     )
 };
 
-export default DisplayArticle;
+export default ArticleItem;

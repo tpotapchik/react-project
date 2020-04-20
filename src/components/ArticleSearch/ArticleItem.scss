@@ -1,0 +1,19 @@
+.article-title
+{
+  font-size: 1.5rem;
+}
+
+.article-item
+{
+  border:           1px solid darkgrey;
+  text-align:       center;
+  background-color: #cacaca;
+  padding:          1rem;
+  box-sizing:       border-box;
+  flex:             0 0 30%;
+}
+
+.article-author
+{
+  font-size: 0.8rem;
+}
