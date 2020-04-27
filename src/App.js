@@ -9,12 +9,24 @@ import Registration from 'components/Registration/Registration';
 import Converter from 'components/Converter/Converter';
 import ConverterAdvanced from 'components/Converter/ConverterAdvanced';
 import Article from 'components/ArticleSearch/Article';
+import ChildrenEx from 'components/Children';
+import WrappedComponent from 'components/Test/TestComponent';
+import CatMouse from 'components/Cat/CatMouse';
+import SwitchView from 'components/SwitchSun/SwitchView.js';
 
 const user = {name: 'Tanya'};
 
 function App() {
     return (
         <React.StrictMode>
+            <SwitchView />
+            <section className="container section">
+                {/*<CatMouse />*/}
+            </section>
+            <WrappedComponent />
+            <section className="container section">
+                <ChildrenEx>hi children</ChildrenEx>
+            </section>
             <section className="container section">
                 <Article />
             </section>
