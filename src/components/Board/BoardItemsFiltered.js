@@ -9,7 +9,7 @@ const BoardItemsFiltered = ({onFilter, items}) => {
 
     const [activeFilter, setActiveFilter] = useState(allItems);
 
-    function filterItems(filter) {
+    const filterItems = (filter) => {
 
         const arr = items.map(todo => {
             return Object.assign({}, todo);
@@ -37,7 +37,7 @@ const BoardItemsFiltered = ({onFilter, items}) => {
 
         setActiveFilter(filter);
         onFilter(arr);
-    }
+    };
 
     return (
         <div className="filters">

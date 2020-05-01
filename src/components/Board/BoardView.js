@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Context from './Context';
 import BoardList from './BoardList';
 import AddItem from './AddItem';
@@ -11,11 +11,20 @@ const defaultItems = [
     {id: 3, completed: false, title: 'Learn js', filterShow: true},
 ];
 
+const todolistSorage = 'todolist';
+
+const getInitialData = () => {
+    let data = localStorage.getItem(todolistSorage);
+    return data !== null ? JSON.parse(data) : defaultItems;
+};
+
 const BoardView = () => {
 
-    const [todos, setTodoItems] = useState(defaultItems);
+    const [todos, setTodoItems] = useState(getInitialData());
+    const [filtered, setFiltered] = useState(false);
 
     const toggleTodo = (id) => {
+        setFiltered(false);
         setTodoItems(
             todos.map(todo => {
                 const newItem = Object.assign({}, todo);
@@ -28,11 +37,12 @@ const BoardView = () => {
     };
 
     const removeTodo = (id) => {
+        setFiltered(false);
         setTodoItems(todos.filter(todo => todo.id !== id));
     };
 
     const addTodo = (title) => {
-
+        setFiltered(false);
         setTodoItems(todos.concat([
             {
                 title,
@@ -43,7 +53,18 @@ const BoardView = () => {
         ]));
     };
 
+    useEffect(() => {
+        if (!filtered) {
+            saveStateToLocalStorage();
+        }
+    });
+
+    const saveStateToLocalStorage = () => {
+        localStorage.setItem(todolistSorage, JSON.stringify(todos));
+    };
+
     const onFilterItems = (arr) => {
+        setFiltered(true);
         setTodoItems(arr);
     };
 
@@ -56,8 +77,8 @@ const BoardView = () => {
 
                 {todos.length > 0 ?
                     <>
-                        <BoardList todos={todos} onToggle={toggleTodo}/>
-                        <BoardItemsFiltered onFilter={onFilterItems} items={todos}/>
+                    <BoardList todos={todos} onToggle={toggleTodo}/>
+                    <BoardItemsFiltered onFilter={onFilterItems} items={todos}/>
                     </> :
                     <p>You have nothing to do in list</p>
                 }
