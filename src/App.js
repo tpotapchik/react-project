@@ -13,13 +13,19 @@ import ChildrenEx from 'components/Children';
 import WrappedComponent from 'components/Test/TestComponent';
 import CatMouse from 'components/Cat/CatMouse';
 import SwitchView from 'components/SwitchSun/SwitchView.js';
+import BoardView from 'components/Board/BoardView';
 
 const user = {name: 'Tanya'};
 
 function App() {
     return (
         <React.StrictMode>
-            <SwitchView />
+            <section className="container section">
+                <BoardView />
+            </section>
+            <section className="container section">
+                <SwitchView />
+            </section>
             <section className="container section">
                 {/*<CatMouse />*/}
             </section>

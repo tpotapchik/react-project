@@ -5,7 +5,7 @@ class Cat extends Component {
     render() {
         const mouse = this.props.mouse;
         return (
-            <img src={icon} style={{position: 'fixed', left: mouse.x, top: mouse.y}} />
+            <img src={icon} alt="Cat" style={{position: 'fixed', left: mouse.x, top: mouse.y}} />
         );
     }
 }

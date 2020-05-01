@@ -1,0 +1,107 @@
+.wrapper {
+	max-width: 500px;
+}
+
+.board-form-list {
+	.form-list-field {
+		border: 1px solid #cacaca;
+		position: relative;
+		
+		input {
+			display: block;
+			width: 100%;
+			border: 0;
+			padding: .5rem 4.5rem .5rem 1rem;
+			box-sizing: border-box;
+			font-size: 14px;
+			line-height: 1.2;
+		}
+	}
+	
+	.form-list-buttons {
+		position: absolute;
+		top: 50%;
+		right: .5em;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
+		width: 55px;
+		
+		&.hidden {
+			display: none;
+		}
+	}
+	
+	button {
+		cursor: pointer;
+		font-weight: 700;
+		border-radius: 2px;
+		transition: all .3s ease;
+		
+		&:hover {
+			background-color: #cacaca;
+		}
+	}
+}
+
+.board-list {
+	list-style: none;
+	border-left: 1px solid #cacaca;
+	border-bottom: 1px solid #cacaca;
+	border-right: 1px solid #cacaca;
+	margin: 0;
+	padding: 1rem 0;
+	
+	.board-list-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: .5rem 1rem;
+		
+		+ .board-list-item {
+			margin-top: .5rem;
+		}
+		
+		label {
+			margin: 0 10px;
+		}
+		
+		&.completed {
+			label {
+				color: #dadada;
+				text-decoration: line-through;
+			}
+		}
+	}
+	
+	input {
+		padding: .5rem 1rem;
+	}
+	
+	button {
+		border: 0;
+		cursor: pointer;
+	}
+}
+
+.filters {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
+	
+	.filters-item {
+		color: #ababab;
+		cursor: pointer;
+		margin: 0 10px;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+		
+		&.active {
+			color: black;
+			text-decoration: underline;
+		}
+	}
+}
