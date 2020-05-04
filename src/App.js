@@ -14,7 +14,7 @@ import WrappedComponent from 'components/Test/TestComponent';
 import CatMouse from 'components/Cat/CatMouse';
 import SwitchView from 'components/SwitchSun/SwitchView.js';
 import LearnRoutes from 'components/LearnRoutes/LearnRoutes.js';
-import BoardView from 'components/Board/BoardView';
+import BoardPage from 'components/Board/BoardPage';
 
 const user = {name: 'Tanya'};
 
@@ -22,10 +22,10 @@ function App() {
     return (
         <React.StrictMode>
             <section className="container section">
-                <LearnRoutes />
+                {/*<LearnRoutes />*/}
             </section>
             <section className="container section">
-                <BoardView />
+                <BoardPage />
             </section>
             <section className="container section">
                 <SwitchView />
