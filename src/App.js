@@ -13,6 +13,7 @@ import ChildrenEx from 'components/Children';
 import WrappedComponent from 'components/Test/TestComponent';
 import CatMouse from 'components/Cat/CatMouse';
 import SwitchView from 'components/SwitchSun/SwitchView.js';
+import LearnRoutes from 'components/LearnRoutes/LearnRoutes.js';
 import BoardView from 'components/Board/BoardView';
 
 const user = {name: 'Tanya'};
@@ -20,6 +21,9 @@ const user = {name: 'Tanya'};
 function App() {
     return (
         <React.StrictMode>
+            <section className="container section">
+                <LearnRoutes />
+            </section>
             <section className="container section">
                 <BoardView />
             </section>
