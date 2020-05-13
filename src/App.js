@@ -13,7 +13,7 @@ import ChildrenEx from 'components/Children';
 import WrappedComponent from 'components/Test/TestComponent';
 import CatMouse from 'components/Cat/CatMouse';
 import SwitchView from 'components/SwitchSun/SwitchView.js';
-// import LearnRoutes from 'components/LearnRoutes/LearnRoutes.js';
+import LearnRoutes from 'components/LearnRoutes/LearnRoutes.js';
 import AddUserForm from 'components/reduxUser/AddUserForm.js';
 import Users from 'components/reduxUser/Users.js';
 
@@ -23,7 +23,7 @@ function App() {
     return (
         <>
         <section className="container section">
-            {/*<LearnRoutes />*/}
+            <LearnRoutes />
         </section>
         <section className="container section">
             <SwitchView />
